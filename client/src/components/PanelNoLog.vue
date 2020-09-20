@@ -41,7 +41,8 @@
 <script>
 import itemStatic from '@/components/itemStatic'
 import itemCreatePanel from '@/components/itemCreatePanel'
-import { TimelineMax } from 'gsap'
+import { gsap, TimelineMax, CSSPlugin } from 'gsap'
+gsap.registerPlugin(CSSPlugin)
 
 export default {
   data () {
@@ -104,11 +105,11 @@ export default {
 
     let tlAssets = new TimelineMax()
     tlAssets.from("h1, #deco", {opacity: 0, y: () => Math.random() * 50 - 10 + 10, duration: 1, stagger: 0.5})
-      .from(".text-log:last-child", {opacity: 0, y: () => Math.random() * 50 - 10 + 10, duration: 1, ease: "power2.out"})
+            .from(".text-log:last-child", {opacity: 0, y: () => Math.random() * 50 - 10 + 10, duration: 1, ease: "power2.out"})
 
     let tlBg = new TimelineMax({repeat: -1})
-    tlBg.from(".item-bg", {opacity: 0, y: () => Math.random() * 50 - 10 + 10, duration: 1, stagger: 0.15})
-        .to(".item-bg", {opacity: 0, x: () => Math.random() * 500 - 200, duration: 1, stagger: 0.15})
+    tlBg.from(".item-bg", { attr: { opacity: 0, y: () => Math.random() * 300 - 100 + 10 }, duration: 1, stagger: 0.15})
+        .to(".item-bg", { attr: { opacity: 0, x: () => Math.random() * 300 - 100 + 100 }, duration: 1, stagger: 0.15})
       
   },
   created() {
