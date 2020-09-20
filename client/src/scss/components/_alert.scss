@@ -1,0 +1,30 @@
+@import "../setup/variables";
+
+.alert {
+    position: fixed;
+    margin: 0 auto;
+    max-width: 80%;
+    left: 0;
+    right: 0;
+    bottom: 5vh;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include transition();
+
+    @media screen and (min-width: $md) {
+        max-width: 400px;
+    }
+
+    &.error {
+        transform: translateY(0%);
+        opacity: 1;
+        background: var(--error);
+        border: solid 1px var(--error-border);
+        border-radius: $radius;
+        color: #fff;
+    }
+}

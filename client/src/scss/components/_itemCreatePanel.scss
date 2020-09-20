@@ -1,0 +1,107 @@
+@import "../setup/variables";
+
+
+.panel-item {
+  margin: 25px 0 5px 0;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 7px;
+  @include transition();
+  overflow: hidden;
+  &:nth-child(even) {
+      margin: 4px 0;
+  }
+  input, select {
+    background:var(--bg);
+  }
+  .checkbox:checked {
+    background: #44308a;
+  }
+  .panel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    opacity: 0;
+    @include transition();
+    height: 0;
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+.panel-item.add {
+  background: #fff;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.05);
+  .panel-content {
+    opacity: 1;
+    @include transition();
+    height: 280px;
+    padding: 2px;
+  }
+  #add {
+    background: var(--fontColor);
+    span {
+      &:last-child {
+        transform: translateY(-3px) rotate(0deg);
+        opacity: 0;
+      }
+    }
+  }
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1vh 0;
+}
+
+.title {
+  font-size: 1.4em;
+  text-align: left;
+  font-weight: bold;
+}
+#add {
+  padding: 9px 6px 7px;
+  display: block;
+  background: var(--fontColor);
+  border-radius: 50%;
+  span {
+    background: var(--bg);
+      height: 2px;
+      width: 12px;
+      display: block;
+      margin: 1px 0;
+      @include transition();
+      &:last-child {
+        transform: translateY(-3px) rotate(90deg);
+        opacity: 1;
+      }
+  }
+}
+
+label {
+  text-align: left;
+}
+
+.input-mid {
+  width: 49%;
+}
+
+.fieldcheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    margin: 0 5px 0 0;
+    display: inline-block;
+  }
+}

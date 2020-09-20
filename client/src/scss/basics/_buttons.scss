@@ -1,0 +1,16 @@
+button {
+    border: 0;
+    background: var(--fontColor);
+    display: block;
+    padding: 12px 32px;
+    border-radius: 32px;
+    color: var(--bg);
+    margin-top: 16px;
+    @include transition();
+}
+
+button:focus, button:hover {
+    outline: none;
+    background: var(--fontColor);
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platforms",
+  "info": {
+    "name": "Platform"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

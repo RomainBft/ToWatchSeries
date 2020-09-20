@@ -1,0 +1,52 @@
+{
+    "homeMessageLogin": "Votre ToWatchList",
+    "homeMessageNoLog": "N'oubliez plus vos séries",
+    "homeInfo": "pour utiliser nos services",
+    "navLogin": "Se connecter",
+    "navRegister": "S'enregister",
+    "navHome": "Accueil",
+    "navProfil": "Profil",
+    "navLogOut": "Déconnexion",
+    "loginTitle": "Login",
+    "label": {
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "password": "Mot de passe",
+        "newPassword": "Nouveau mot de passe",
+        "passwordConf": "Confirmation du mot de passe",
+        "newPasswordConf": "Confirmation du nouveau mot de passe"
+    },
+    "global": {
+        "loaderPFirst": "Chargement",
+        "loaderPSecond": "de votre ToWatchList",
+        "noAccount": "Pas de compte ?",
+        "createOne": "Rejoins-nous !",
+        "hasAccount": "Déjà un compte ?",
+        "login": "Se connecter",
+        "or": "ou",
+        "register": "S'enregister",
+        "submitModif": "Enregister les modifications",
+        "darkTheme": "Theme sombre",
+        "langGlobal": "Langue",
+        "lang": {
+            "fr-FR": "Francais",
+            "en-EN": "Anglais"
+        }
+    },
+    "serie": {
+        "addSerie": "Ajouter une série",
+        "title": "Titre",
+        "season": "Saison",
+        "episode": "Episode",
+        "platform": "Plateforme",
+        "category": "Catégorie",
+        "view": "Vu",
+        "addSerieBtn" : "Ajouter la série",
+        "delete": "Supprimer",
+        "edit": "Modifier"
+    },
+    "error": {
+        "login": "Email ou mot de passe incorrect",
+        "global": "Une erreur est survenue"
+    }
+}

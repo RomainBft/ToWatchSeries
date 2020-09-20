@@ -1,0 +1,324 @@
+@import "../setup/variables";
+
+.panel-item {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .05);
+  border-radius: 7px;
+  font-size: 0.7em;
+  @include transition();
+
+  // height: 66px;
+  overflow: hidden;
+
+  &:nth-child(even) {
+    margin: 4px 0;
+  }
+
+  &:hover {
+    background: #fff;
+    opacity: 1 !important;
+  }
+
+  &.show {
+    padding: 16px;
+    opacity: 1 !important;
+  }
+
+  &.see {
+    opacity: .5;
+  }
+}
+
+.item-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+
+
+  .viewed {
+    background: #44308a;
+    border-radius: 5px;
+    font-size: 0.65em;
+    padding: 4px;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+}
+
+.item-desc {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+
+  .season-item {
+    margin-right: 15px;
+  }
+
+  .season-item,
+  .episode-item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.item-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+
+  .item-platform,
+  .item-category {
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  .item-platform {
+    margin-right: 5px;
+    background: var(--fontColor);
+    color: var(--bg);
+  }
+
+  .item-category {
+    background: var(--fontColor);
+    color: #fff;
+
+    &.Action {
+      background: var(--cAction);
+    }
+
+    &.Aventure {
+      background: var(--cAventure);
+    }
+
+    &.Comedy {
+      background: var(--cComedy);
+    }
+
+    &.Horror {
+      background: var(--cHorror);
+    }
+
+    &.Science-Fiction {
+      background: var(--cSciFi);
+    }
+
+    &.Sport {
+      background: var(--cSport);
+    }
+
+    &.Fantastic {
+      background: var(--cFantastic);
+    }
+
+    &.Documentary {
+      background: var(--cDocumentary);
+    }
+
+    &.Thriller {
+      background: var(--cThriller);
+    }
+
+    &.Anime {
+      background: var(--cAnime);
+    }
+  }
+}
+
+.item-options {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  @include transition();
+
+
+  .field {
+    span {
+      padding: 10px 11px;
+      margin: 5px;
+      opacity: 1;
+      background: #160f2e17;
+      border-radius: 7px;
+      @include transition();
+      cursor: pointer;
+
+      &:first-child {
+        margin: 5px 5px 5px 0;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    &:first-child {
+      margin: 0 5px 0 0;
+    }
+  }
+}
+
+.panel-item.show {
+  .item-options {
+    padding: 15px 0 0;
+    opacity: 1;
+    margin: 10px 0 0;
+    height: auto;
+    border-top: solid 1px var(--fontColor);
+
+    .field {
+      padding: 10px 0;
+      opacity: 1;
+
+      &.fieldcheck {
+        background: none;
+        border-radius: 0;
+      }
+
+      span {
+        &:hover {
+          background: #160f2e;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .btnOption {
+    background: var(--fontColor);
+    color: var(--fontColor);
+    padding: 0 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    @include transition();
+
+    span {
+      background: var(--bg);
+      height: 10px;
+      border-radius: 0;
+
+      &:last-child {
+        opacity: 0;
+        height: 0;
+        margin: 0;
+      }
+
+      &:first-child {
+        transform: translate(0px, 6px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(0px, -6px) rotate(-45deg);
+      }
+    }
+
+    &:hover {
+      background: var(--fontColor);
+      color: var(--bg);
+    }
+  }
+}
+
+.fieldcheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    margin: 0 5px 0 0;
+    display: inline-block;
+  }
+
+  input {
+    cursor: pointer;
+  }
+}
+
+.btnOption {
+  padding: 5px 12px;
+  margin: 0 0 0 5px;
+  border-radius: 50%;
+  color: var(--fontColor);
+  @include transition();
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 7px;
+
+  span {
+    display: block;
+    opacity: 1;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background: var(--fontColor);
+    padding: 0;
+    margin: 2px 0;
+    @include transition();
+  }
+
+  &:hover,
+  &:focus {
+    opacity: .7;
+    background: var(--fontColor);
+
+    span {
+      background: var(--bg);
+    }
+  }
+}
+
+.black {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 5;
+}
+
+.edit {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  position: fixed;
+  top: 35%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: .5s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 0;
+  transform: translateY(-55%);
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}

@@ -1,0 +1,35 @@
+@import "setup/reset";
+@import "setup/typography";
+@import "setup/variables";
+
+@import "basics/base";
+@import "basics/input";
+@import "basics/buttons";
+
+:root {
+    --bg : #ededed;
+    --bg-dark :  #d6d6d6;
+    --i-bg :  #ebebeb;
+    --link : rgb(54, 108, 232);
+    --error: rgb(216, 61, 44);
+    --error-dark: rgb(185, 49, 34);
+    --fontColor : rgb(22, 15, 46);
+    --fontLinkColor : rgb(138, 148, 46);
+    --cAction : rgb(231, 126, 35);
+    --cAventure : rgb(144, 193, 11);
+    --cComedy : rgb(155, 88, 182);
+    --cHorror : rgb(231, 77, 60);
+    --cSciFi : rgb(26, 188, 156);
+    --cSport : rgb(95, 85, 53);
+    --cFantastic : rgb(6, 188, 97);
+    --cDocumentary : rgb(57, 73, 219);
+    --cThriller : rgb(53, 74, 95);
+    --cAnime : rgb(223, 165, 7);
+}
+
+[data-theme="dark"] {
+    --bg : rgb(20, 19, 37);
+    --bg-dark : rgb(8, 7, 17);
+    --fontColor : rgb(245, 244, 244);
+    --i-bg :  rgb(26, 24, 51);
+}

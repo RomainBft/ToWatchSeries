@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "series",
+  "info": {
+    "name": "Serie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "view": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "season": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "episode": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "platform": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

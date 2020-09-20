@@ -1,0 +1,75 @@
+.popup-edit {
+    background: var(--i-bg);
+    border: solid 1px var(--bg-dark);
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 28px;
+    .input-mid {
+        width: 49%; 
+    }
+    .fieldcheck {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0;
+        
+        label {
+            margin: 0 5px 0 0;
+            display: inline-block;
+        }
+        .checkbox {
+            display: inline-block;
+            appearance: none;
+            transition: all 0.35s ease-in-out;
+            position: relative;
+            height: 15px;
+            width: 40px;
+            background: var(--bg-dark);
+            border-radius: 25px;
+            margin-right: 10px;
+            margin-left: 10px;
+
+            &.checked {
+
+                &:after {
+                    background: var(--cAventure)!important;
+                    left: 19px!important;
+                }
+            }
+            &:after {
+                content: '';
+                display: block;
+                left: -2px;
+                top: -4px;
+                position: absolute;
+                transition: all 0.35s ease-in-out;
+                background: var(--bg);
+                border: solid 2px var(--fontColor);
+                width: 18px;
+                height: 18px;
+                border-radius: 25px;
+            }
+        }
+    }
+    .ctn-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0 0;
+        button {
+             margin: 0 5px;
+             
+             &:nth-child(2) {
+                border: solid 1px var(--fontColor);
+                background: var(--bg);
+                color: var(--fontColor);
+            }
+        }
+
+    }
+}

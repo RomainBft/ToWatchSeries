@@ -1,0 +1,52 @@
+{
+    "homeMessageLogin": "Your ToWatchList",
+    "homeMessageNoLog": "Don't forget where you are",
+    "homeInfo": "to use the services",
+    "navLogin": "Login",
+    "navRegister": "Register",
+    "navHome": "Home",
+    "navProfil": "Profil",
+    "navLogOut": "Logout",
+    "loginTitle": "Login",
+    "label": {
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "newPassword": "New Password",
+        "passwordConf": "Password Conf",
+        "newPasswordConf": "Confirm new Password"
+    },
+    "global": {
+        "loaderPFirst": "Loading",
+        "loaderPSecond": "of your ToWatchList",
+        "noAccount" : "No account ?",
+        "createOne": "CreateOne !",
+        "hasAccount": "Already have an account ?",
+        "login": "Login",
+        "or": "or",
+        "register": "Register",
+        "submitModif": "Submit modification",
+        "darkTheme": "Dark Theme",
+        "langGlobal": "Lang",
+        "lang": {
+            "fr-FR": "French",
+            "en-EN": "English"
+        }
+    },
+    "serie": {
+        "addSerie": "Add serie",
+        "title": "Title",
+        "season": "Season",
+        "episode": "Episode",
+        "platform": "Platform",
+        "category": "Category",
+        "view": "View",
+        "addSerieBtn" : "Add this serie",
+        "delete": "Delete",
+        "edit": "Edit"
+    },
+    "error": {
+        "login": "Email or password is wrong",
+        "global": "An error has occurred"
+    }
+}
