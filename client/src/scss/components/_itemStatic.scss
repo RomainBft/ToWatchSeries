@@ -26,7 +26,6 @@
   }
 
   &.show {
-    padding: 16px;
     opacity: 1 !important;
   }
 
@@ -186,6 +185,7 @@
     .field {
       padding: 10px 0;
       opacity: 1;
+      margin: 0;
 
       &.fieldcheck {
         background: none;
@@ -193,6 +193,8 @@
       }
 
       span {
+        padding: 5px;
+
         &:hover {
           background: #160f2e;
           color: #fff;
@@ -208,6 +210,7 @@
     border-radius: 20px;
     cursor: pointer;
     @include transition();
+    top: 8px;
 
     span {
       background: var(--bg);
@@ -256,10 +259,11 @@
   margin: 0 0 0 5px;
   border-radius: 50%;
   color: var(--fontColor);
+  transform: scale(0.7);
   @include transition();
   cursor: pointer;
   position: absolute;
-  top: 16px;
+  top: 8px;
   right: 7px;
 
   span {

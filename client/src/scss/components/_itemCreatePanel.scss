@@ -105,3 +105,18 @@ label {
     display: inline-block;
   }
 }
+
+#deco {
+  .row {
+    margin-bottom: 0;
+    .title {
+        font-size: 0.85em;
+        @media screen and (min-width: $sm) {
+          font-size: 1em;
+        }
+    }
+    #add {
+        transform: scale(0.7);
+    }
+  }
+}

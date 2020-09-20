@@ -2,7 +2,7 @@
 
 #nolog {
     position: relative;
-    height: calc(100vh - 89px);
+    height: calc(100vh - 49px);
     overflow: hidden;
     margin: 0 auto;
     max-width: 1050px;
@@ -11,11 +11,11 @@
         overflow-y: hidden;
     }
     h1 {
-        font-size: 4em;
+        font-size: 3.5em;
         letter-spacing: -0.05em;
         line-height: 1.15em;
         text-align: center;
-        padding: 40px 10px 90px;
+        padding: 40px 10px;
         margin: 0;
 
         @media screen and (min-width: $sm) {
@@ -122,6 +122,8 @@
     position: relative;
     transform: translateY(-5%);
     z-index: -1;
+    width: 60%;
+    margin: 0 auto;
     @media screen and (min-width: $md) {
         transform: translateY(0%);
         width: 50%;
@@ -142,6 +144,10 @@
         }
         .panel-item:first-child {
             margin: 0;
+            padding: 16px 16px 4px;
+            @media screen and (min-width: $sm) {
+                padding: 16px 4px 4px;
+              }
         }
     }
     #iphone {
