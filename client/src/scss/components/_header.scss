@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px;
+    padding: 15px;
     position: relative;
     z-index: 10;
     @include transition();
@@ -115,7 +115,7 @@ header {
 nav {
   position: fixed;
   right: 0px;
-  top: 89px;
+  top: 49px;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -125,14 +125,8 @@ nav {
   @include transition();
   z-index: 20;
   transform: translateX(100%);
-  @media screen and (min-width: $sm) {
-    top: 49px;
-  }
 
   &.active {
-    @media screen and (min-width: $sm) {
-      top: 49px;
-    }
     transform: translateX(0%);
 
     &:after {
@@ -204,7 +198,7 @@ nav {
 
 #black {
   position: fixed;
-  top: 89px;
+  top: 49px;
   right: 0;
   width: 100vw;
   height: 100vh;
@@ -212,17 +206,11 @@ nav {
   opacity: 0;
   z-index: -1;
   @include transition();
-  @media screen and (min-width: $sm) {
-    top: 49px;
-  }
   
   &.active {
-    @media screen and (min-width: $sm) {
-      top: 49px;
-    }
     opacity: 0.5;
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
     height: 100vh;
   }
 }
