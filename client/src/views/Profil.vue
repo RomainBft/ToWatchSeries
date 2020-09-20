@@ -98,7 +98,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('auth', ['account']),
+    ...mapState('auth', ['account', 'isUserLoggedIn']),
     ...mapState('lang', ['locale']),
     language: {
       get: function() {
@@ -107,6 +107,11 @@ export default {
       set: function(newVal) {
         this.changeLocale(newVal)
       }
+    }
+  },
+  mounted() {
+    if(!this.isUserLoggedIn) {
+      this.$router.push('Login')
     }
   }
 }
