@@ -2,7 +2,7 @@
 
 #nolog {
     position: relative;
-    height: calc(var(--app-height) - 49px);
+    height: calc(100vh - 49px);
     overflow: hidden;
     margin: 0 auto;
     max-width: 1050px;
