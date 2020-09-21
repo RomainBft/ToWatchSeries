@@ -140,14 +140,8 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
-  height: 0;
   width: 100%;
-  opacity: 0;
   overflow: hidden;
-  @include transition();
-
 
   .field {
     span {
@@ -156,8 +150,7 @@
       opacity: 1;
       background: #160f2e17;
       border-radius: 7px;
-      @include transition();
-      cursor: pointer;
+      display: inline-block;
 
       &:first-child {
         margin: 5px 5px 5px 0;
@@ -176,25 +169,13 @@
 
 .panel-item.show {
   .item-options {
-    padding: 15px 0 0;
-    opacity: 1;
-    margin: 10px 0 0;
-    height: auto;
-    border-top: solid 1px var(--fontColor);
-
     .field {
-      padding: 10px 0;
-      opacity: 1;
-      margin: 0;
-
       &.fieldcheck {
         background: none;
         border-radius: 0;
       }
 
       span {
-        padding: 5px;
-
         &:hover {
           background: #160f2e;
           color: #fff;
@@ -243,6 +224,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px 0 0;
 
   label {
     margin: 0 5px 0 0;

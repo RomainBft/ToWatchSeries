@@ -1,7 +1,7 @@
 <template>
     <div class="panel-item" :class="{ show : isActive, see : seriestat.see }">
       <div class="item-main">
-        <p class="item-title"><span class="viewed" v-if="seriestat.view">{{ $t('serie.view') }}</span> {{ seriestat.title }}</p>
+        <p class="item-title"><span class="viewed" v-if="seriestat.see">{{ $t('serie.view') }}</span> {{ seriestat.title }}</p>
         <div class="item-desc">
           <p class="season-item"><b>{{ $t('serie.season') }} : </b>{{ seriestat.season }}</p>
           <p class="episode-item"><b>{{ $t('serie.episode') }} : </b>{{ seriestat.episode }}</p>
@@ -34,7 +34,6 @@ export default {
   data () {
     return {
       isActive: false,
-      see: false,
       isError: false,
       texterror: null
     }
