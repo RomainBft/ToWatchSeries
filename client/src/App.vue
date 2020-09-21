@@ -19,10 +19,17 @@ export default {
     ...mapState('lang', ['locale']),
   },
   methods: {
-    ...mapActions('lang', ['changeLocale'])
+    ...mapActions('lang', ['changeLocale']),
+
+    updateHeightDocument() {
+      const doc = document.documentElement
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
   },
   created() {
     this.changeLocale(this.locale ? this.locale : navigator.language)
+    this.updateHeightDocument()
+    window.addEventListener("resize", this.updateHeightDocument)
   }
 }
 </script>

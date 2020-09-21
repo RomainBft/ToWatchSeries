@@ -18,10 +18,10 @@
       </div>
       <div class="item-options" >
           <div class="field">
-              <span><i class="fas fa-pencil-alt"></i>{{ $t('serie.edit') }}</span>
-              <span><i class="far fa-trash-alt"></i>{{ $t('serie.delete') }}</span>
+              <span class="anim-field"><i class="fas fa-pencil-alt"></i>{{ $t('serie.edit') }}</span>
+              <span class="anim-field"><i class="far fa-trash-alt"></i>{{ $t('serie.delete') }}</span>
           </div>
-          <div class="field fieldcheck">
+          <div class="field fieldcheck anim-field">
               <label for="see">See</label>
               <input type="checkbox" class="checkbox" name="see" id="see" ref="seeInput" :checked="seriestat.see == true">
           </div>
