@@ -3,8 +3,8 @@
       <div class="item-main">
         <p class="item-title"><span class="viewed" v-if="seriestat.view">{{ $t('serie.view') }}</span> {{ seriestat.title }}</p>
         <div class="item-desc">
-          <p class="season-item"><b>Season : </b>{{ seriestat.season }}</p>
-          <p class="episode-item"><b>Episode : </b>{{ seriestat.episode }}</p>
+          <p class="season-item"><b>{{ $t('serie.season') }} : </b>{{ seriestat.season }}</p>
+          <p class="episode-item"><b>{{ $t('serie.episode') }} : </b>{{ seriestat.episode }}</p>
         </div>
       </div>
       <div class="item-content">

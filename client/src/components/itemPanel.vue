@@ -3,8 +3,8 @@
       <div class="item-main">
         <p class="item-title"><span class="viewed" v-if="serie.view">{{ $t('serie.view') }}</span> {{ serie.title }}</p>
         <div class="item-desc">
-          <p class="season-item"><b>Season : </b>{{ serie.season }}</p>
-          <p class="episode-item"><b>Episode : </b>{{ serie.episode }}</p>
+          <p class="season-item"><b>{{ $t('serie.season') }} : </b>{{ serie.season }}</p>
+          <p class="episode-item"><b>{{ $t('serie.episode') }} : </b>{{ serie.episode }}</p>
         </div>
       </div>
       <div class="item-content">
@@ -16,12 +16,12 @@
             <span></span>
           </div>
       </div>
-      <div class="item-options" >
+      <div class="item-options">
           <div class="field">
-              <span @click="isEdit = !isEdit"><i class="fas fa-pencil-alt"></i> {{ $t('serie.edit') }}</span>
-              <span @click="removeSerie" ><i class="far fa-trash-alt"></i> {{ $t('serie.delete') }}</span>
+              <span class="anim-field" @click="isEdit = !isEdit"><i class="fas fa-pencil-alt"></i> {{ $t('serie.edit') }}</span>
+              <span class="anim-field" @click="removeSerie"><i class="far fa-trash-alt"></i> {{ $t('serie.delete') }}</span>
           </div>
-          <div class="field fieldcheck">
+          <div class="field fieldcheck anim-field">
               <label for="view">{{ $t('serie.view') }}</label>
               <input type="checkbox" class="checkbox" name="view" id="view" ref="viewInput" :checked="serie.view == true" @click="viewSerie">
           </div>
@@ -36,6 +36,8 @@
 <script>
 import SeriesService from '@/services/SeriesService'
 import popupEdit from '@/components/popupEdit'
+import { gsap, TimelineMax, CSSPlugin } from 'gsap'
+gsap.registerPlugin(CSSPlugin)
 
 export default {
   data () {
@@ -53,6 +55,19 @@ export default {
   methods: {
     itemShow () {
       this.isActive = !this.isActive
+
+      const item = this.$el.querySelector('.item-options')
+      const itemField = this.$el.getElementsByClassName('anim-field')
+
+      const tl2 = new TimelineMax()
+
+      if(this.isActive) {
+        tl2.fromTo(item, {opacity: 0, y: 0, height: 0, marginTop: 0}, {opacity: 1, y: -10, height: "auto", marginTop: 25, duration: 0.25})
+          .fromTo(itemField, {opacity: 0, y: -20}, {opacity: 1, y: 0, duration: 0.5, stagger: 0.05})
+      } else {
+        tl2.fromTo(itemField, {opacity: 1, y: 0}, {opacity: 0, y: -20, duration: 0.25})
+          .fromTo(item, {opacity: 1, y: -10, height: "auto", marginTop: 25}, {opacity: 0, y: 0, height: 0, marginTop: 0, duration: 0.25})
+      }
     },
 
     async removeSerie () {
@@ -82,6 +97,11 @@ export default {
     editeCompleteStep () {
         this.isEdit = false
       }
+  },
+  mounted() {
+    const item = this.$el.querySelector('.item-options')
+    const tl = new TimelineMax()
+    tl.set(item, {opacity: 0, y: 0, height: 0, marginTop: 0})
   }
 }
 </script>
