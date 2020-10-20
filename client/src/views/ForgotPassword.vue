@@ -26,7 +26,7 @@
             return {
                 isError: false,
                 email: undefined,
-                emailSend: true
+                emailSend: false
             }
         },
         components: {
@@ -36,8 +36,8 @@
             getCode () {
                 AuthenticationService.forgotPassword({email: this.email})
                     .then(response => {
-
-                        console.log(response)
+                        this.emailSend = true
+                        throw response
                     })
                     .catch(error => {
                         console.log('An error occurred:', error.response);
