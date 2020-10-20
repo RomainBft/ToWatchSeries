@@ -12,10 +12,17 @@ body {
     box-sizing: border-box;
 }
 
+.form {
+    p {
+        text-align: center;
+    }
+}
+
 h1 {
-    text-align: center;
-    margin: 0;
-    color: var(--fontColor);
+    margin-bottom: 20px;
+    @media screen and (min-width: $md) {
+        text-align: left;
+    }
 }
 
 ul {

@@ -22,8 +22,8 @@ export default {
   data () {
     return {
       loading: true,
-      titmeline: null,
-      series: []
+      series: [],
+      error: undefined
     }
   },
   components: {
@@ -39,21 +39,21 @@ export default {
     loadingUpdate() {
       this.loading = true
       this.series = ''
-      this.updateSeries()
-        .then(series => {
-          this.series = series
-          this.loading = false
-        })
+      this.updateSeries();
     },
 
     async updateSeries() {
-      const series = (await SeriesService.getSeries(this.account.user.id)).data
-      return series
+      try {
+        const series = (await SeriesService.getSeries(this.account.user.id)).data
+        this.series = series
+        this.loading = false
+      } catch (error) {
+        this.error = error;
+      }
     }
   },
-  async mounted () {
-      this.series = (await SeriesService.getSeries(this.account.user.id)).data
-      this.loading = false
+  mounted () {
+    this.updateSeries()
   }
 }
 </script>

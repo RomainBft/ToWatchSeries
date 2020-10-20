@@ -12,6 +12,7 @@ import PanelNoLog from '@/components/PanelNoLog'
 import { mapState } from 'vuex'
 
 export default {
+  name: 'Home',
   data () {
     return {
     }
@@ -28,13 +29,4 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import "../scss/views/home.scss";
-#nolog {
-  a {
-    color: var(--link);
-    font-weight: bold;
-  }
-  p {
-    text-align: center;
-  }
-}
 </style>

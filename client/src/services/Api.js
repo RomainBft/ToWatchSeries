@@ -13,6 +13,7 @@ export default () => {
     return axios.create({
       baseURL: process.env.VUE_APP_API_LINK,
       headers: {
+        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token.data}`
       }
     });

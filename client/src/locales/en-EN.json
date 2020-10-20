@@ -8,6 +8,7 @@
     "navProfil": "Profil",
     "navLogOut": "Logout",
     "loginTitle": "Login",
+    "emailSend": "You will receive a password modification confirmation email, which may take a few minutes before appearing in your mailbox.",
     "label": {
         "username": "Username",
         "email": "Email",
@@ -22,6 +23,8 @@
         "noAccount" : "No account ?",
         "createOne": "CreateOne !",
         "hasAccount": "Already have an account ?",
+        "forgotPassword": "Forgot password ?",
+        "resetPassword": "Reset password",
         "login": "Login",
         "or": "or",
         "register": "Register",

@@ -8,6 +8,7 @@
     "navProfil": "Profil",
     "navLogOut": "Déconnexion",
     "loginTitle": "Login",
+    "emailSend": "Vous allez recevoir un email de confirmation de modification de mot passe, celui-ci peut prendre quelques minutes avant d'apparaître dans votre boîte mail.",
     "label": {
         "username": "Nom d'utilisateur",
         "email": "Email",
@@ -22,6 +23,8 @@
         "noAccount": "Pas de compte ?",
         "createOne": "Rejoins-nous !",
         "hasAccount": "Déjà un compte ?",
+        "forgotPassword": "Mot de passe oublié ?",
+        "resetPassword": "Réinitialiser le mot de passe",
         "login": "Se connecter",
         "or": "ou",
         "register": "S'enregister",

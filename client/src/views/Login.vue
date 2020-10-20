@@ -10,6 +10,7 @@
         <button @click="login()">{{ $t('global.login') }}</button>
       </div>
       <p>{{ $t('global.noAccount') }} <a href="/register">{{ $t('global.createOne') }}</a></p>
+      <p><a href="/forgotPassword">{{ $t('global.forgotPassword') }}</a></p>
     </div>
     <loader v-if="loading" />
     <alert v-bind:class="{error : isError}" @close="isError = false"/>
@@ -22,6 +23,7 @@ import alert from '@/components/Alert'
 import { mapActions } from 'vuex'
 
 export default {
+  name: 'Login',
   data () {
     return {
       email: '',
@@ -41,7 +43,7 @@ export default {
       this.loading = true
       this.setAuth({ identifier: this.email, password: this.password })
         .then(() => {
-          this.$router.push({name: 'Home'})
+          this.$router.push('/')
         }, err => {
           this.loading = false
           this.isError = true
@@ -51,8 +53,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-@import "../scss/views/register.scss";
-</style>

@@ -26,7 +26,7 @@ import close from 'vue-material-design-icons/CloseCircle'
 import { mapState } from 'vuex'
 
 export default {
-  name: 'register',
+  name: 'Register',
   data () {
     return {
       ursename: '',
@@ -53,8 +53,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-@import "../scss/views/register.scss";
-</style>

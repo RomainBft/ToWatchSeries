@@ -1,18 +1,2 @@
 @import "../setup/variables";
 
-.form {
-    @media screen and (min-width: $md) {
-        min-width: 450px;
-        margin: 10vh auto 0;
-    }
-    p {
-        text-align: center;
-    }
-}
-
-h1 {
-    margin-bottom: 20px;
-    @media screen and (min-width: $md) {
-        text-align: left;
-    }
-}
