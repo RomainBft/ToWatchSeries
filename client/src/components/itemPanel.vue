@@ -48,7 +48,9 @@ export default {
       isEdit: false
     }
   },
-  props: ['serie'],
+  props: {
+    serie : Object
+  },
   components: {
     popupEdit
   },

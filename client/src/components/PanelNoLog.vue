@@ -88,9 +88,9 @@ export default {
   components: {
     itemStatic, itemCreatePanel
   },
-  props: [
-    'title'
-  ],
+  props: {
+    title : String
+  },
   async mounted () {
     this.h1Pos()
     const item2 = document.getElementsByClassName('panel-item')[1]

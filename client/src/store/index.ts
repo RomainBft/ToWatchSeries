@@ -17,7 +17,7 @@ const dataState = createPersistedState({
   },
 })
 
-export default new Vuex.Store({
+const store =  new Vuex.Store({
   modules: {
     auth,
     series,
@@ -25,3 +25,5 @@ export default new Vuex.Store({
   },
   plugins: [dataState]
 })
+
+export default store;

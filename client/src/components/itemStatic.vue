@@ -38,9 +38,9 @@ export default {
       texterror: null
     }
   },
-  props: [
-    'seriestat'
-  ]
+  props: {
+    seriestat : Object
+  }
 }
 </script>
 

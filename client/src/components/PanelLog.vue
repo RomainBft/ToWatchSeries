@@ -29,9 +29,9 @@ export default {
   components: {
     itemPanel, itemCreatePanel, loader
   },
-  props: [
-    'title'
-  ],
+  props: {
+    title : String
+  },
   computed: {
     ...mapState('auth', ['isUserLoggedIn', 'account']),
   },

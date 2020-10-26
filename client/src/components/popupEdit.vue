@@ -41,7 +41,9 @@ import { mapState } from 'vuex'
 
 export default {
     name: 'popupEdit',
-    props: ['serie'],
+    props: {
+        Serie: Object
+    },
     computed: {
         ...mapState('series', ['categories', 'platforms']),
     },

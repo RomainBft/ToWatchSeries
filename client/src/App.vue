@@ -5,11 +5,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import HeaderPartial from '@/components/Header.vue'
 import { mapActions, mapState } from 'vuex'
 
-export default {
+export default Vue.extend({
   name: 'App',
   components: {
     HeaderPartial
@@ -24,7 +25,7 @@ export default {
   created() {
     this.changeLocale(this.locale ? this.locale : navigator.language)
   }
-}
+})
 </script>
 
 <style lang="scss">

@@ -1,22 +1,23 @@
 import Api from '@/services/Api'
 
 export default {
-  getSeries (id) {
+  getSeries (id : number) {
     return Api().get(`series?userId=${id}&_sort=view:ASC`)
   },
-  getOneSerie (serieId) {
+  getOneSerie (serieId : number) {
     return Api().get(`series?id=${serieId}`)
   },
-  updateView (serieId, view) {
+  updateView (serieId : number, view : boolean) {
     return Api().put(`series/${serieId}`, view)
   },
-  updateSerie (serieId, serie) {
+  updateSerie (serieId : number, serie : Object) {
     return Api().put(`series/${serieId}`, serie)
   },
-  deleteSerie (serieId) {
+  deleteSerie (serieId : number) {
     return Api().delete(`series/${serieId}`)
   },
-  postSeries (serie) {
+  postSeries (serie : Object) {
     return Api().post('series', serie)
   }
 }
+
